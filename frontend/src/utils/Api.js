@@ -65,11 +65,8 @@ class Api {
 }
 
 export const api = new Api({
-  // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-39',
   baseUrl: 'https://api.mtsoy.numberone.nomoredomains.sbs',
   headers: {
-    // authorization: 'f6872bd5-5bdc-483a-908f-75dc86dba7db',
-    'Content-Type': 'application/json',
-
+    'Content-Type': 'application/json'
   }
 });
