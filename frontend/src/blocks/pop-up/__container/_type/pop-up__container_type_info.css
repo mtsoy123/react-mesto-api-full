@@ -1,0 +1,9 @@
+.pop-up__container_type_info {
+  padding: 60px 36px;
+  max-width: 358px;
+  box-shadow: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}

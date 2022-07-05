@@ -1,0 +1,16 @@
+.pop-up__label {
+	display: inline-block;
+	margin-bottom: 30px;
+	width: 100%;
+	position: relative;
+}
+
+.pop-up__label:last-of-type {
+	margin-bottom: 48px;
+}
+
+@media screen and (max-width: 716px) {
+	.pop-up__label:last-of-type {
+		margin-bottom: 45px;
+	}
+}

@@ -1,0 +1,10 @@
+.login__label {
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.login__label:last-of-type {
+  margin-bottom: 216px;
+}

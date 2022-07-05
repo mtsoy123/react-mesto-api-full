@@ -1,0 +1,13 @@
+.pop-up__error-message {
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  border-bottom: none;
+  color: #f00;
+  margin-bottom: 5px;
+  position: absolute;
+  left: 0;
+  top: 36px;
+}

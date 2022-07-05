@@ -1,0 +1,8 @@
+.grid__element {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 282px;
+  height: 366px;
+  position: relative;
+}

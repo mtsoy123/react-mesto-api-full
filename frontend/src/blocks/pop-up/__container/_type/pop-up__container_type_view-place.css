@@ -1,0 +1,9 @@
+.pop-up__container_type_view-place {
+  padding: 0;
+  max-width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}

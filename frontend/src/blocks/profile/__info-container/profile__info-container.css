@@ -1,0 +1,23 @@
+.profile__info-container {
+  display: grid;
+  grid-template-columns: minmax(100px, max-content) 24px;
+  gap: 16px 18px;
+  grid-template-areas:
+    "name button-edit"
+    "job job";
+  padding-right: 30px;
+  position: relative;
+}
+
+@media screen and (max-width: 716px) {
+  .profile__info-container {
+    grid-template-areas:
+      "name button-edit"
+      "job .";
+    padding-right: 0;
+    gap: 8px 10px;
+    max-width: 226px;
+    left: 14px;
+    justify-items: center;
+  }
+}

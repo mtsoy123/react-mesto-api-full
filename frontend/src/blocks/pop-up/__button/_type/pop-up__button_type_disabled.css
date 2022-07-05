@@ -1,0 +1,8 @@
+.pop-up__button_type_disabled {
+	opacity: 20%;
+	border: 1px solid #000;
+	background-color: white;
+	color: black;
+	padding-top: 13px;
+	padding-bottom: 17px;
+}
