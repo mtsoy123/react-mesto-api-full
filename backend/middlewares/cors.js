@@ -2,6 +2,7 @@ const allowedCors = [
   'https://mtsoy.numberone.nomoredomains.sbs/',
   'http://mtsoy.numberone.nomoredomains.sbs/',
   'localhost:3000',
+  'http://localhost:3000',
 ];
 
 module.exports = (req, res, next) => {
