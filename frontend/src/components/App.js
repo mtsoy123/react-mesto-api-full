@@ -185,7 +185,7 @@ function App() {
     .then((res) => {
       if (res) {
         setStatus('success');
-        history.push('/sign-in');
+        history.push('/signin');
         setIsInfoTooltipOpened(true);
       }
     })
@@ -220,20 +220,20 @@ function App() {
           onCardDelete={handleCardDelete}
         />
 
-        <Route path="/sign-in">
+        <Route path="/signin">
           <Login
             handleLogin={handleLogin}
           />
         </Route>
 
-        <Route path="/sign-up">
+        <Route path="/signup">
           <Register
             handleRegister={handleRegister}
           />
         </Route>
 
         <Route>
-          {loggedIn ? (<Redirect to="/"/>) : (<Redirect to="/sign-in"/>)}
+          {loggedIn ? (<Redirect to="/"/>) : (<Redirect to="/signin"/>)}
         </Route>
 
       </Switch>

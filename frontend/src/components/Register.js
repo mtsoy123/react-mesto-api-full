@@ -43,7 +43,7 @@ function Register({handleRegister}) {
           </label>
           <button type="submit" aria-label="Зарегистрироваться" className="register__button">Зарегистрироваться</button>
         </form>
-        <p className="register__description">Уже зарегистрированы? <Link to="/sign-in"
+        <p className="register__description">Уже зарегистрированы? <Link to="/signin"
                                                                          className="register__description register__link">Войти</Link>
         </p>
       </div>

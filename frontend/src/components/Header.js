@@ -9,7 +9,7 @@ function Header({loggedIn, userData, onSignOut}) {
   function signOut() {
     localStorage.removeItem('token');
     onSignOut(false);
-    history.push('/sign-in');
+    history.push('/signin');
   }
 
   return (
@@ -23,11 +23,11 @@ function Header({loggedIn, userData, onSignOut}) {
           </div>
           :
           <>
-            <Route path="/sign-in">
-              <Link to="/sign-up" className="header__link">Зарегистрироваться</Link>
+            <Route path="/signin">
+              <Link to="/signup" className="header__link">Зарегистрироваться</Link>
             </Route>
-            <Route path="/sign-up">
-              <Link to="/sign-in" className="header__link">Войти</Link>
+            <Route path="/signup">
+              <Link to="/signin" className="header__link">Войти</Link>
             </Route>
           </>
         }
