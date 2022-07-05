@@ -69,6 +69,7 @@ export const api = new Api({
   baseUrl: 'https://api.mtsoy.numberone.nomoredomains.sbs',
   headers: {
     // authorization: 'f6872bd5-5bdc-483a-908f-75dc86dba7db',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+
   }
 });

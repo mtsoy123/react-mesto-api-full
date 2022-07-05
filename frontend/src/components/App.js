@@ -33,6 +33,7 @@ function App() {
   useEffect(() => {
     Promise.all([api.getProfile(), api.getInitialCards()])
     .then(([userProfile, cards]) => {
+      console.log(cards)
       setCurrentUser(userProfile)
       setCards(cards)
     })
