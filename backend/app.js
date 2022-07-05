@@ -19,13 +19,7 @@ const app = express();
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
-app.use((req, res, next) => {
-  console.log('req', req);
-  console.log('res', res);
-  next();
-});
-
-app.use(cors);
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -65,7 +59,7 @@ app.use(auth);
 app.use('/users', userRouter);
 app.use('/cards', cardRouter);
 
-app.use((req, resб, next) => {
+app.use((req, res, next) => {
   next(new NotFoundErr('Страница не найдена'));
 });
 

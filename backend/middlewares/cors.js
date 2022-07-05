@@ -1,14 +1,11 @@
 const allowedCors = [
-  'https://mtsoy.numberone.nomoredomains.sbs/',
-  'http://mtsoy.numberone.nomoredomains.sbs/',
+  'https://mtsoy.numberone.nomoredomains.sbs',
+  'http://mtsoy.numberone.nomoredomains.sbs',
   'localhost:3000',
   'http://localhost:3000',
 ];
 
 module.exports = (req, res, next) => {
-  // console.log('req', req.headers);
-  console.log(123);
-  console.log('req', req.headers['access-control-request-headers']);
   const { origin } = req.headers;
   const { method } = req;
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
