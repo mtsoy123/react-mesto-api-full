@@ -5,6 +5,7 @@ class Api {
   }
 
   _checkResponse = (url, options = {}) => {
+    // console.log(url)
     return fetch(url, options)
     .then((res) => res.ok ? res.json() : Promise.reject(res.status))
   }

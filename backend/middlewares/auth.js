@@ -3,7 +3,7 @@ const UnauthorizedErr = require('../utils/errors/UnauthorizedErr');
 
 module.exports = (req, res, next) => {
   const token = req.cookies.jwt;
-  console.log(token);
+  // console.log(token);
   if (!token) {
     throw new UnauthorizedErr('Пользователь не авторизован');
   }
