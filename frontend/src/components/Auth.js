@@ -2,6 +2,8 @@ const BASE_URL = 'https://mtsoy.numberone.nomoredomains.sbs';
 
 const _checkResponse = (url, options = {}) => {
   return fetch(url, options)
+  .then(res => {console.log(res)
+    return res})
   .then((res) => res.ok ? res.json() : Promise.reject(res.status))
 }
 
