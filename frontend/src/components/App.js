@@ -134,18 +134,6 @@ function App() {
     setViewPlacePopup({})
   }
 
-  /*
-    function closeAllPopups(evt) {
-      if (evt.target.classList.contains('pop-up_opened') || evt.target.classList.contains('pop-up__button-close') /!*|| (evt.target.type === 'submit')*!/) {
-        setIsEditProfilePopupOpen()
-        setIsEditAvatarPopupOpen()
-        setIsAddPlacePopupOpen()
-        setIsInfoTooltipOpened()
-        setViewPlacePopup({})
-      }
-    }
-  */
-
   function checkToken() {
     if (localStorage.getItem('token')) {
       const token = localStorage.getItem('token')
