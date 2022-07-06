@@ -51,9 +51,9 @@ app.post(
   createUser,
 );
 
-/* app.get('/signout', (req, res) => {
+app.get('/signout', (req, res) => {
   res.clearCookie('jwt').send({ message: 'Выход' });
-}); */
+});
 
 app.use(auth);
 

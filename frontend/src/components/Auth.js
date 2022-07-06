@@ -40,6 +40,19 @@ export const authorize = (email, password) => {
   })
 };
 
+export const signout = () => {
+  return _checkResponse(`${BASE_URL}/signout`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then((res) => {
+      return res
+    }
+  )
+}
+
 export const getContent = (token) => {
   return _checkResponse(`${BASE_URL}/users/me`, {
     method: 'GET',

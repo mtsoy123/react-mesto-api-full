@@ -1,4 +1,5 @@
 import logo from '../images/logo.svg';
+import {signout} from './Auth';
 import {Link, Route, useHistory} from 'react-router-dom';
 import React from 'react'
 
@@ -10,6 +11,8 @@ function Header({loggedIn, userData, onSignOut}) {
     localStorage.removeItem('token');
     onSignOut(false);
     history.push('/signin');
+    signout()
+    .catch(err => console.log(err))
   }
 
   return (
