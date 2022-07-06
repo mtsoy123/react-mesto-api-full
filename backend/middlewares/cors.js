@@ -15,14 +15,14 @@ module.exports = (req, res, next) => {
 
   console.log(allowedCors.includes(origin));
   if (allowedCors.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
+    res.set('Access-Control-Allow-Origin', origin);
   }
 
   if (method === 'OPTIONS') {
-    res.header('test', 'test');
+    res.set('test', 'test');
     console.log(123);
-    res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
-    res.header('Access-Control-Allow-Headers', requestHeaders);
+    res.set('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
+    res.set('Access-Control-Allow-Headers', requestHeaders);
     return res.end();
   }
 
