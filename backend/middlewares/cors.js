@@ -12,12 +12,12 @@ module.exports = function (req, res, next) {
   const { method } = req;
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS';
   const requestHeaders = req.headers['access-control-request-headers'];
-
+  console.log('i am here');
   if (allowedCors.includes(origin)) {
+    console.log('i am also here');
     res.header('Access-Control-Allow-Origin', origin);
     res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
-    // res.header('Access-Control-Allow-Headers', requestHeaders);
-    res.header('Access-Control-Allow-Headers', 'Content-type,Accept,X-Custom-Header');
+    res.header('Access-Control-Allow-Headers', requestHeaders);
   }
 
   if (method === 'OPTIONS') {
