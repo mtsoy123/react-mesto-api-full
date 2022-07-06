@@ -1,4 +1,4 @@
-const BASE_URL = 'https://mtsoy.numberone.nomoredomains.sbs';
+const BASE_URL = 'https://api.mtsoy.numberone.nomoredomains.sbs';
 
 const _checkResponse = (url, options = {}) => {
   return fetch(url, options)
