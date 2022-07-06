@@ -5,6 +5,7 @@ const BadRequestErr = require('../utils/errors/BadRequestErr');
 const NotFoundErr = require('../utils/errors/NotFoundErr');
 const ConflictErr = require('../utils/errors/ConflictErr');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
 const {
   CREATED,
   DUPLICATE_ERROR,
@@ -37,7 +38,8 @@ module.exports.getUserById = (req, res, next) => {
       if (err.name === 'CastError' || err.name === 'ValidationError') {
         next(new BadRequestErr('Некорректный формат запроса'));
         return;
-      } next(err);
+      }
+      next(err);
     });
 };
 
@@ -124,7 +126,11 @@ module.exports.login = (req, res, next) => {
 
   User.findUserByCred(email, password)
     .then((user) => {
-      const token = jwt.sign({ _id: user._id }, 'secret-key', { expiresIn: '7d' });
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+        { expiresIn: '7d' },
+      );
 
       res.cookie('jwt', token, {
         httpOnly: true,
