@@ -1,4 +1,4 @@
-const BASE_URL = 'https://auth.nomoreparties.co';
+const BASE_URL = 'https://mtsoy.numberone.nomoredomains.sbs';
 
 const _checkResponse = (url, options = {}) => {
   return fetch(url, options)
