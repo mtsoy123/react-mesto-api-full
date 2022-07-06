@@ -77,7 +77,7 @@ app.use((err, req, res, next) => {
         : message,
     });
 });
-
-app.listen(PORT, 'localhost');
+console.log(PORT);
+app.listen(80, 'localhost');
 
 // this is test
