@@ -40,9 +40,9 @@ export const authorize = (email, password) => {
   })
 };
 
-export const signout = () => {
+export const getSignOut = () => {
   return _checkResponse(`${BASE_URL}/signout`, {
-    method: 'POST',
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json'
     }
