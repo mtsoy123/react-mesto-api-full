@@ -1,6 +1,7 @@
 const BASE_URL = 'https://api.mtsoy.numberone.nomoredomains.sbs';
 
 const _checkResponse = (url, options = {}) => {
+  console.log(url)
   return fetch(url, options)
   .then(res => {console.log(res)
     console.log(url)
