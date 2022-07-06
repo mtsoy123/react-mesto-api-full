@@ -17,7 +17,7 @@ const { PORT = 3000 } = process.env;
 require('dotenv').config();
 
 const app = express();
-mongoose.connect('mongodb://localhost:27017/mestodb');
+mongoose.connect('mongodb://localhost:27017/fullapi');
 
 app.use(cors);
 
