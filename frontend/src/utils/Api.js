@@ -67,7 +67,7 @@ class Api {
 
 export const api = new Api({
   baseUrl: 'https://api.mtsoy.numberone.nomoredomains.sbs',
-  headers: {
+  /*headers: {
     'Content-Type': 'application/json'
-  }
+  }*/
 });
