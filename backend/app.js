@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const { errors, celebrate } = require('celebrate');
 const Joi = require('joi');
-// const cors = require('cors');
+const cors = require('cors');
 const userRouter = require('./routes/user');
 const cardRouter = require('./routes/card');
 const { login, createUser } = require('./controllers/user');
@@ -12,7 +12,7 @@ const auth = require('./middlewares/auth');
 const NotFoundErr = require('./utils/errors/NotFoundErr');
 const validateLink = require('./utils/regex');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const cors = require('./middlewares/cors');
+// const cors = require('./middlewares/cors');
 
 const { PORT = 3000 } = process.env;
 require('dotenv').config();
@@ -20,8 +20,17 @@ require('dotenv').config();
 const app = express();
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
-app.use(cors);
-// app.use(cors());
+// app.use(cors);
+app.use(cors({
+  origin: [
+    'https://mtsoy.numberone.nomoredomains.sbs',
+    'http://mtsoy.numberone.nomoredomains.sbs',
+    'localhost:3000',
+    'localhost:3001',
+    'http://localhost:3000',
+    'http://localhost:3001',
+  ],
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
