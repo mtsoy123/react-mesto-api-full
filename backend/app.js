@@ -13,7 +13,7 @@ const validateLink = require('./utils/regex');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const cors = require('./middlewares/cors');
 
-const { PORT = 3000 } = process.env;
+// const { PORT = 3000 } = process.env;
 require('dotenv').config();
 
 const app = express();
@@ -79,6 +79,6 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(PORT, 'localhost');
+app.listen(3000, 'localhost');
 
 // this is test
