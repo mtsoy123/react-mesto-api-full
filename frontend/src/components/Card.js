@@ -12,6 +12,7 @@ console.log(cardProps)
 console.log(cardProps.likes)
 console.log(currentUser)
 console.log(currentUser._id)
+  // когда компонент обновляется, приходят новые пропсы, что-то происходит с current id
 console.log(cardProps.likes.some(like => like === currentUser._id))
 
 
@@ -33,7 +34,7 @@ console.log(cardProps.likes.some(like => like === currentUser._id))
     `${isOwn ? 'grid__delete-element' : 'grid__delete-element_hidden'}`
   );
 
-  const isLiked = cardProps.likes.some(i => (i === currentUser._id));
+  const isLiked = cardProps.data.likes.some(i => (i === currentUser._id));
 
   const cardLikeButtonClassName = (
     `${isLiked && 'grid__like-button_active'}`
