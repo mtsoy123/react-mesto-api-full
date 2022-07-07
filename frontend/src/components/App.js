@@ -34,6 +34,7 @@ function App() {
     Promise.all([api.getProfile(), api.getInitialCards()])
     .then(([userProfile, cards]) => {
       console.log(userProfile)
+      console.log('cards from server',cards)
       setCurrentUser(userProfile)
       setCards(cards)
     })
