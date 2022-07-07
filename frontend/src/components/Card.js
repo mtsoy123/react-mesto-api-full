@@ -28,7 +28,7 @@ function Card({
     `${isOwn ? 'grid__delete-element' : 'grid__delete-element_hidden'}`
   );
 
-  const isLiked = cardProps.likes.some(i => i._id === currentUser._id);
+  const isLiked = cardProps.likes.some(i => i === currentUser._id);
 
   const cardLikeButtonClassName = (
     `${isLiked && 'grid__like-button_active'}`
