@@ -7,7 +7,7 @@ function Card({
                 onCardLike,
                 onCardDelete
               }) {
-
+console.log(cardProps)
   const currentUser = useContext(CurrentUserContext)
 
   function handleClick() {
