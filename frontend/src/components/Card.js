@@ -28,7 +28,13 @@ console.log(cardProps)
     `${isOwn ? 'grid__delete-element' : 'grid__delete-element_hidden'}`
   );
 
-  const isLiked = cardProps.likes.some(i => i === currentUser._id);
+  const isLiked = cardProps.likes.some(i => {
+    if (i === currentUser._id) {
+      return true
+    } else {
+      return false
+    }
+  });
 
   const cardLikeButtonClassName = (
     `${isLiked && 'grid__like-button_active'}`
