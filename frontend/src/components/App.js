@@ -39,9 +39,9 @@ function App() {
     .catch((err) => {
       console.log(err);
     });
-  }, []);
+  }, [loggedIn]);
 
-  useEffect(() => checkToken(), [])
+  useEffect(() => checkToken(), [loggedIn])
 
   function handleAddPlaceClick() {
     setIsAddPlacePopupOpen((isAddPlacePopupOpen) => !isAddPlacePopupOpen)
