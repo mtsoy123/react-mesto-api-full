@@ -41,7 +41,8 @@ export const getSignOut = () => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
-    }
+    },
+    credentials: 'include',
   })
   .then((res) => {
       return res
@@ -55,7 +56,8 @@ export const getContent = (token) => {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
-    }
+    },
+    credentials: 'include',
   })
   .then(data => data)
 }
