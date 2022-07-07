@@ -9,6 +9,7 @@ function Card({
               }) {
 console.log(cardProps)
 console.log(cardProps.likes)
+console.log(currentUser._id)
 console.log(cardProps.likes.some(like => like === currentUser._id))
   const currentUser = useContext(CurrentUserContext)
 
