@@ -11,12 +11,11 @@ function Card({
   const currentUser = useContext(CurrentUserContext)
 
   const isOwn = cardProps.owner === currentUser._id;
+  const [isLiked, setIsLiked] = useState(false);
 
-    const [isLiked, setIsLiked] = useState(false);
-
-    useEffect(() => {
-      setIsLiked (cardProps.likes.some(i => (i === currentUser._id)))
-    }, [cardProps])
+  useEffect(() => {
+    setIsLiked (cardProps.likes.some(i => (i === currentUser._id)))
+  }, [cardProps])
 
   function handleClick() {
     onCardClick(cardProps);
