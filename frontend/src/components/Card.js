@@ -22,7 +22,7 @@ function Card({
     onCardDelete(cardProps);
   }
 
-  const isOwn = cardProps.owner._id === currentUser._id;
+  const isOwn = cardProps.owner === currentUser._id;
 
   const cardDeleteButtonClassName = (
     `${isOwn ? 'grid__delete-element' : 'grid__delete-element_hidden'}`
