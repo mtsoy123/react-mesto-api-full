@@ -8,6 +8,8 @@ function Card({
                 onCardDelete
               }) {
 console.log(cardProps)
+console.log(cardProps.likes)
+console.log(cardProps.likes.some(like => like === currentUser._id))
   const currentUser = useContext(CurrentUserContext)
 
   function handleClick() {
