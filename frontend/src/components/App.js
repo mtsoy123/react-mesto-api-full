@@ -33,8 +33,6 @@ function App() {
   useEffect(() => {
     Promise.all([api.getProfile(), api.getInitialCards()])
     .then(([userProfile, cards]) => {
-      console.log(userProfile)
-      console.log('cards from server',cards)
       setCurrentUser(userProfile)
       setCards(cards)
     })
@@ -73,7 +71,6 @@ function App() {
   }
 
   function handleUpdateAvatar(link) {
-    // console.log(link);
     api.editAvatar(link)
     .then(res => {
       setCurrentUser({
