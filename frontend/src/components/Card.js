@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import CurrentUserContext from '../contexts/CurrentUserContext';
 
 function Card({
@@ -9,6 +9,14 @@ function Card({
               }) {
 
   const currentUser = useContext(CurrentUserContext)
+
+  const isOwn = cardProps.owner === currentUser._id;
+
+    const [isLiked, setIsLiked] = useState(false);
+
+    useEffect(() => {
+      setIsLiked (cardProps.likes.some(i => (i === currentUser._id)))
+    }, [cardProps])
 
   function handleClick() {
     onCardClick(cardProps);
@@ -22,13 +30,9 @@ function Card({
     onCardDelete(cardProps);
   }
 
-  const isOwn = cardProps.owner === currentUser._id;
-
   const cardDeleteButtonClassName = (
     `${isOwn ? 'grid__delete-element' : 'grid__delete-element_hidden'}`
   );
-
-  const isLiked = cardProps.likes.some(i => (i === currentUser._id));
 
   const cardLikeButtonClassName = (
     `${isLiked && 'grid__like-button_active'}`

@@ -36,7 +36,8 @@ module.exports.deleteCard = (req, res, next) => {
         next(new ForbiddenErr('Вы пытаетесь удалить чужую карточку'));
         return;
       }
-      card.remove().then(() => res.send(card));
+      // eslint-disable-next-line consistent-return
+      return card.remove().then(() => res.send(card));
     })
     .catch(next);
 };
