@@ -68,7 +68,8 @@ class Api {
     } else {
       return this._checkResponse(`${this._baseUrl}/cards/${id}/likes`, {
         method: 'PUT',
-        headers: this._headers
+        headers: this._headers,
+        credentials: 'include',
       })
     }
   }
