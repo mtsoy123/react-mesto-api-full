@@ -9,12 +9,12 @@ function Card({
               }) {
   const currentUser = useContext(CurrentUserContext)
 console.log(cardProps)
-console.log(cardProps.likes)
-console.log(currentUser)
-console.log(currentUser._id)
+// console.log(cardProps.likes)
+// console.log(currentUser)
+// console.log(currentUser._id)
   // когда компонент обновляется, приходят новые пропсы, что-то происходит с current id
   // Почемуто после обновления cardProps приходят в data{}
-console.log(cardProps.likes.some(like => like === currentUser._id))
+// console.log(cardProps.likes.some(like => like === currentUser._id))
 
 
   function handleClick() {
