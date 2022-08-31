@@ -6,10 +6,15 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "ejs": "^3.1.8",
+    "got": "^12.3.1",
+    "mongoose": "^5.13.15",
+    "nth-check": "^2.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^5.2.1",
     "react-scripts": "5.0.1",
+    "terser": "^5.14.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
