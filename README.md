@@ -1,4 +1,4 @@
-# Проект Mesto
+# Mesto
 ![logo](https://github.com/mtsoy123/react-mesto-api-full/blob/main/utils/logoDark.svg)
 
 ## Frontend
@@ -7,27 +7,27 @@ https://mtsoy.numberone.nomoredomains.sbs
 ## Backend
 https://api.mtsoy.numberone.nomoredomains.sbs
 
-## Запуск приложения
+## Getting Started
 `npm run start`
 
-## О проекте
-Mesto — приложение для публикации фотографий в общую ленту. Это учебный проект, в котором на практике поработал с React.js, версткой и API. Для приложения разработан фронтенд и бекенд. Приложение разрабатывалось с учетом декларативных и реактивных подходов программирования. 
+## About Project
+Mesto is an application for publishing photos to a shared feed. This is a training project in which I worked with React.js, HTML/CSS and REST-API. A frontend and backend have been developed for the application. The application was developed taking into account declarative and reactive programming approaches.
 
-Фронтенд сверстан по БЭМ, на HTML и CSS. Интерактивный функционал реализован на Javascript, React.js. Проект подключен к серверу через REST-API. Настроена сборка с Webpack. 
+The frontend is developed using BEM, in HTML and CSS. Interactive functionality is implemented in Javascript, React.js . The project is connected to the server via the REST API. The build with Webpack is configured.
 
-Бекенд разработан на node.js, express.js. В приложении реализована обработка запросов и ошибок. Роуты защищены авторизацией, пароль хешируется. Запросы валидируются до передачи в контроллеры и в схеме базы данных
+The backend is developed with node.js, express.js. The application implements request and error handling. The routers are protected by authorization, the password is hashed. Requests are validated before being passed to controllers and in the database schema
 
-Использован git для контроля версий.
+Git is used for version control.
 
-## Функционал
-* Регистрация нового пользователя
-* Авторизация существующего пользователя
-* Редактирование профиля: имя, описание, аватар
-* Добавление фотографий в ленту
-* Лайк/дизлайк фотографии
-* Удаление своей фотографии
+## Features
+* Registration of a new user
+* Authorization of an existing user
+* Profile editing: name, description, avatar
+* Adding photos to the feed
+* Like/dislike photos
+* Deleting your photo
 
-## Технологии
+## Tech Stack
 * HTML
 * CSS
 * JavaScript
@@ -38,5 +38,5 @@ Mesto — приложение для публикации фотографий 
 * Joi
 * Celebrate
 
-## Планы по доработке
-Добавить валидацию форм на фронте, и доработать попапы, чтобы улучшить пользовательский опыт.
+## Improvement plan
+Add form validation at the frontend, and refine popups to improve the user experience.
